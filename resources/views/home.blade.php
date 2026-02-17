@@ -172,6 +172,9 @@
                         },
                         pagination: { el: '.swiper-pagination', clickable: true },
                         navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                        touchReleaseOnEdges: true,
+                        resistanceRatio: 0,
+                        watchSlidesProgress: true,
                     });
                 });
             </script>
@@ -245,6 +248,8 @@
             },
             pagination: { el: '.swiper-pagination', clickable: true },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            touchReleaseOnEdges: true,
+            watchSlidesProgress: true,
         });
     });
 </script>

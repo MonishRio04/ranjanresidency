@@ -34,6 +34,8 @@
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -134,6 +136,18 @@
             transform: translateY(-2px);
         }
 
+        /* Swiper Jitter Fix */
+        .swiper-slide {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+        }
+        
+        .swiper-container, .swiper {
+            touch-action: pan-y !important;
+        }
+
         /* Navigation */
         .navbar {
             background-color: #fff;
@@ -144,6 +158,8 @@
             z-index: 1000;
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             transition: all 0.3s;
+            backface-visibility: hidden;
+            transform: translateZ(0);
         }
 
         .nav-container {
