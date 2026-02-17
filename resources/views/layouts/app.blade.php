@@ -39,7 +39,7 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cinzel', serif; /* Closest to Kollegan available */
+            font-family: 'Cinzel', serif;
             color: var(--text-main);
             text-transform: capitalize;
             letter-spacing: 0;
@@ -82,60 +82,6 @@
             box-shadow: 0 5px 15px rgba(193, 40, 47, 0.3);
         }
 
-        /* Floating Book Button like GRT */
-        .floating-book {
-            position: fixed;
-            right: 30px;
-            bottom: 30px;
-            z-index: 999;
-            background: var(--brand-maroon);
-            color: #fff;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            animation: pulse-heart 2s infinite;
-        }
-
-        @keyframes pulse-heart {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .floating-book i {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-
-        .btn-maroon-sm {
-            background-color: var(--brand-maroon);
-            color: #fff !important;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-            margin-left: 10px;
-            display: inline-block;
-        }
-
-        .btn-maroon-sm:hover {
-            background-color: #a01d24;
-            transform: translateY(-2px);
-        }
-
         /* Swiper Jitter Fix */
         .swiper-slide {
             backface-visibility: hidden;
@@ -158,8 +104,6 @@
             z-index: 1000;
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             transition: all 0.3s;
-            backface-visibility: hidden;
-            transform: translateZ(0);
         }
 
         .nav-container {
@@ -200,8 +144,18 @@
             color: var(--brand-maroon);
         }
 
-        @media (max-width: 1050px) {
-            /* This is now handled by the mobile menu at 1150px */
+        .btn-maroon-sm {
+            background-color: var(--brand-maroon);
+            color: #fff !important;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin-left: 10px;
+            display: inline-block;
         }
 
         /* Footer */
@@ -223,6 +177,7 @@
         .footer-title {
             margin-bottom: 20px;
             font-size: 1.2rem;
+            color: #fff;
         }
         
         .footer-bottom {
@@ -241,14 +196,15 @@
             cursor: pointer;
         }
 
+        /* Responsive Breakpoints */
         @media (max-width: 1150px) {
             .section {
-                padding: 50px 0;
+                padding: 60px 0;
             }
 
             h1 { font-size: 2.2rem !important; }
             h2 { font-size: 1.8rem !important; }
-            h3 { font-size: 1.4rem !important; }
+            h3 { font-size: 1.5rem !important; }
             
             .nav-links {
                 display: none;
@@ -264,24 +220,19 @@
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             }
             
-            .nav-links .nav-link {
-                width: 100%;
-                padding: 15px;
-                border-bottom: 1px solid #f5f5f5;
-            }
-
             .nav-links.active {
                 display: flex;
             }
             
-            .menu-toggle {
-                display: block;
+            .nav-links .nav-link {
+                width: 100%;
+                padding: 15px;
+                border-bottom: 1px solid #f5f5f5;
+                font-size: 0.9rem;
             }
 
-            .md-hidden-header {
-                display: inline-block !important; /* Show in mobile menu */
-                margin: 20px 0 0 0;
-                width: 200px;
+            .menu-toggle {
+                display: block;
             }
 
             .logo {
@@ -289,49 +240,81 @@
             }
 
             .hero-title {
-                font-size: 2rem !important;
-                line-height: 1.2 !important;
+                font-size: 2.5rem !important;
+                line-height: 1.1 !important;
             }
 
             .mobile-column {
                 flex-direction: column !important;
-                gap: 30px !important;
-            }
-
-            .mobile-p-0 {
-                padding: 0 !important;
-            }
-            
-            .mobile-mt-20 {
-                margin-top: 20px !important;
-            }
-
-            .md-hidden-header {
-                display: none !important;
+                gap: 40px !important;
             }
 
             .container {
                 padding: 0 15px;
             }
+
+            /* Responsive utilities */
+            .mobile-order-first { order: -1 !important; }
+            .mobile-text-center { text-align: center !important; }
+            .mobile-p-0 { padding: 0 !important; }
+            .mobile-px-20 { padding-left: 20px !important; padding-right: 20px !important; }
+            .mobile-pt-40 { padding-top: 40px !important; }
+            .mobile-mt-30 { margin-top: 30px !important; }
+            .mobile-h-auto { height: auto !important; }
+            .mobile-min-h-0 { min-height: 0 !important; }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 50px 0;
+            }
+            
+            .md-hidden {
+                display: none !important;
+            }
+
+            /* Disable fixed background on mobile for performance and layout stability */
+            .hero-section, .special-showcase {
+                background-attachment: scroll !important;
+            }
+        }
+
+        /* Prevent horizontal overflow globally */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         @media (max-width: 480px) {
             h1 { font-size: 2rem !important; }
-            h2 { font-size: 1.8rem !important; }
-            .hero-title { font-size: 1.8rem !important; }
+            h2 { font-size: 1.7rem !important; }
+            h3 { font-size: 1.4rem !important; }
+            .hero-title { font-size: 2rem !important; }
+            
             .btn-maroon { 
                 padding: 12px 25px; 
-                font-size: 0.75rem; 
+                font-size: 0.8rem; 
                 width: 100%;
                 text-align: center;
+            }
+
+            .logo {
+                font-size: 1.1rem;
             }
         }
 
         @media (min-width: 769px) {
-            .md-hidden {
+            .hidden-desktop {
                 display: none !important;
             }
         }
+
     </style>
 </head>
 <body>

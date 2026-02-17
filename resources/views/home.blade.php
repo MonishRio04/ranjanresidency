@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Hero Section -->
-<section id="home" class="hero-section" style="
+<section id="home" class="hero-section mobile-min-h-0" style="
     min-height: 100vh; 
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ asset('images/site/hero.jpg') }}'); 
     background-size: cover; 
@@ -16,10 +16,10 @@
     padding: 100px 0;
 ">
     <div class="container" style="animation: fadeIn 1.2s ease-out;">
-        <h2 style="font-size: 1.1rem; letter-spacing: 5px; color: #fff; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Discover Luxury At</h2>
-        <h1 class="hero-title" style="font-size: 5rem; margin-bottom: 30px; font-weight: 700; color: #fff; letter-spacing: 2px; line-height: 1.1; text-shadow: 0 5px 25px rgba(0,0,0,0.4);">Ranjan Residency</h1>
+        <h2 class="mobile-text-center" style="font-size: 1.1rem; letter-spacing: 5px; color: #fff; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Discover Luxury At</h2>
+        <h1 class="hero-title mobile-text-center" style="font-size: 5rem; margin-bottom: 30px; font-weight: 700; color: #fff; letter-spacing: 2px; line-height: 1.1; text-shadow: 0 5px 25px rgba(0,0,0,0.4);">Ranjan Residency</h1>
         <div style="width: 100px; height: 3px; background: var(--brand-maroon); margin: 0 auto 40px;"></div>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" class="mobile-px-20">
             <a href="tel:+919786590145" class="btn-maroon" style="padding: 15px 45px; border-radius: 0;">BOOK YOUR STAY</a>
             <a href="{{ route('about') }}" style="background: rgba(255,255,255,0.9); color: var(--text-main); padding: 15px 45px; text-decoration: none; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; transition: all 0.3s; border-radius: 0;">OUR STORY</a>
         </div>
@@ -57,7 +57,7 @@
 <section id="about" class="section" style="position: relative; overflow: hidden; background: #ffffff;">
     <div class="container">
         <div class="mobile-column" style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
-            <div style="flex: 1; min-width: 280px;">
+            <div style="flex: 1; min-width: 0; width: 100%;">
                 <h2 style="font-size: 2.8rem; margin-bottom: 25px; line-height: 1.2; font-weight: 600; color: var(--brand-maroon);">Heritage & <br>Hospitality</h2>
                 <div style="width: 60px; height: 3px; background: var(--brand-maroon); margin-bottom: 30px;"></div>
                 <p style="margin-bottom: 35px; color: var(--text-main); font-size: 1.1rem; line-height: 1.8;">
@@ -76,9 +76,9 @@
                     </div>
                 </div>
             </div>
-            <div style="flex: 1; min-width: 320px; position: relative;">
+            <div style="flex: 1; min-width: 0; width: 100%; position: relative;">
                 <div style="position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid var(--brand-maroon); z-index: 1;"></div>
-                <img src="{{ asset('images/site/20260207060025_IMG_4849.JPG') }}" style="width: 100%; position: relative; z-index: 2; box-shadow: 20px 20px 60px rgba(0,0,0,0.1);" alt="Ranjan Residency Interior">
+                <img src="{{ asset('images/site/20260207060025_IMG_4849.JPG') }}" style="width: 100%; position: relative; z-index: 2; box-shadow: 20px 20px 60px rgba(0,0,0,0.1); display: block;" alt="Ranjan Residency Interior">
             </div>
         </div>
     </div>
@@ -115,7 +115,7 @@
 </section>
 
 <!-- Special Showcase -->
-<section style="min-height: 400px; padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/uploaded_media_0_1770826520282.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; align-items: center; justify-content: center;">
+<section class="special-showcase" style="min-height: 400px; padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/uploaded_media_0_1770826520282.jpg') }}'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; overflow: hidden;">
     <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 50px; border-radius: 20px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 20px;">
         <h2 style="color: #fff; font-size: 3rem; margin-bottom: 20px;">Art & Tradition</h2>
         <p style="color: #fff; font-size: 1.2rem; font-family: 'Lato'; letter-spacing: 3px; text-transform: uppercase;">Preserving our rich cultural heritage</p>
@@ -188,7 +188,7 @@
 </section>
 
 <!-- Banquet Hall / Mini Hall Section -->
-<section id="banquet" class="section" style="background: #fdfdfd; border-top: 1px solid #eee;">
+<section id="banquet" class="section" style="background: #fdfdfd; border-top: 1px solid #eee; overflow-x: hidden;">
     <div class="container">
         <div style="text-align: center; margin-bottom: 60px;">
             <h2 style="font-size: 2.8rem; margin-bottom: 15px; font-weight: 600; color: var(--brand-maroon);">Exclusive Banquet Hall</h2>
@@ -196,13 +196,13 @@
             <p style="color: var(--text-main); font-size: 1.1rem;">Perfect venue for Mini Events & Celebrations</p>
         </div>
 
-        <div class="mobile-column" style="display: flex; gap: 50px; align-items: center;">
-            <div style="flex: 1; min-width: 320px;">
+        <div class="mobile-column" style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+            <div style="flex: 1; min-width: 0; width: 100%;">
                 <div style="border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
-                    <div class="swiper banquet-swiper">
+                    <div class="swiper banquet-swiper" style="height: auto; width: 100%; max-width: 100%; overflow: hidden;">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207062753_IMG_4894.JPG') }}" style="width:100%; height:300px; md-height:450px; object-fit:cover;" class="banquet-img" alt="Banquet Hall"></div>
-                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:300px; md-height:450px; object-fit:cover;" class="banquet-img" alt="Hall View"></div>
+                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207062753_IMG_4894.JPG') }}" style="width:100%; height:300px; object-fit:cover; display: block;" class="banquet-img" alt="Banquet Hall"></div>
+                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:300px; object-fit:cover; display: block;" class="banquet-img" alt="Hall View"></div>
                         </div>
                         <div class="swiper-button-next" style="color: #fff;"></div>
                         <div class="swiper-button-prev" style="color: #fff;"></div>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1; min-width: 0; width: 100%;">
                 <h3 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--text-main);">Grand Celebrations, <br>Mini Hall Convenience</h3>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 30px;">
                     Our fully air-conditioned Mini Hall is designed for intimate gatherings, birthday parties, and corporate meetings. Experience premium hospitality in a cozy yet grand setting.
@@ -257,15 +257,15 @@
 <!-- Ganesha Section -->
 <section id="ganesha" class="section" style="background: rgba(15, 23, 42, 0.2); border-bottom: 1px solid rgba(255,255,255,0.05);">
     <div class="container">
-        <div class="mobile-column" style="display: flex; align-items: center; gap: 60px; flex-direction: row-reverse;">
-            <div style="flex: 1;">
+        <div class="mobile-column" style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px; flex-direction: row-reverse;">
+            <div style="flex: 1; min-width: 0; width: 100%;">
                 <h2 style="font-size: 2.8rem; margin-bottom: 20px; font-weight: 600; color: var(--brand-maroon);">Spiritual Serenity</h2>
                 <div style="width: 60px; height: 3px; background: var(--brand-maroon); margin-bottom: 30px;"></div>
                 <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.8;">Our residency features a beautiful Ganesha shrine, bringing a sense of peace and divine blessings to all our guests and celebrations.</p>
             </div>
-            <div style="flex: 1; min-width: 320px; position: relative;">
+            <div style="flex: 1; min-width: 0; width: 100%; position: relative;">
                 <div style="position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid var(--brand-maroon); z-index: 1;"></div>
-                <img src="{{ asset('images/site/uploaded_media_2_1770826520282.jpg') }}" style="width: 100%; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; z-index: 2;" alt="Ganesha Shrine">
+                <img src="{{ asset('images/site/uploaded_media_2_1770826520282.jpg') }}" style="width: 100%; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; z-index: 2; display: block;" alt="Ganesha Shrine">
             </div>
         </div>
     </div>
@@ -281,19 +281,19 @@
         </div>
         
         <div class="mobile-column" style="display: flex; gap: 0; background: #ffffff; border-radius: 25px; overflow: hidden; border: 1px solid #eeeeee; box-shadow: 0 40px 80px rgba(0,0,0,0.1);">
-            <div style="flex: 2; height: 450px;">
+            <div style="flex: 2; height: 450px;" class="mobile-h-auto">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.276495393043!2d79.0118!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3923fc7b4699%3A0xe9c394d2c8843940!2sPoigai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1625678901234!5m2!1sen!2sin" 
                     width="100%" 
                     height="100%" 
-                    style="border:0;" 
+                    style="border:0; min-height: 300px;" 
                     allowfullscreen="" 
                     loading="lazy">
                 </iframe>
             </div>
-            <div style="flex: 1; padding: 60px; background: #ffffff; display: flex; flex-direction: column; justify-content: center; border: 1px solid #eeeeee;">
-                <h4 style="margin-bottom: 15px; font-size: 2rem; color: var(--brand-maroon); font-weight: 600;">Ranjan Residency</h4>
-                <p style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 35px; line-height: 1.8;">No. 963, M.C. Road, Poigai,<br>Vellore - 632 114, Tamil Nadu</p>
+            <div style="flex: 1; padding: 60px; background: #ffffff; display: flex; flex-direction: column; justify-content: center; border: 1px solid #eeeeee;" class="mobile-px-20 mobile-pt-40">
+                <h4 style="margin-bottom: 15px; font-size: 2rem; color: var(--brand-maroon); font-weight: 600;" class="mobile-text-center">Ranjan Residency</h4>
+                <p style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 35px; line-height: 1.8;" class="mobile-text-center">No. 963, M.C. Road, Poigai,<br>Vellore - 632 114, Tamil Nadu</p>
                 <div style="display: flex; flex-direction: column; gap: 15px;">
                     <a href="https://maps.google.com" target="_blank" class="btn-maroon" style="text-align: center; border-radius: 0;">GET DIRECTIONS</a>
                     <a href="tel:+919786590145" style="text-align: center; color: var(--brand-maroon); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; padding: 10px; letter-spacing: 1px;">Contact Support</a>
@@ -374,11 +374,11 @@
                 </div>
                 <p style="color: var(--text-main); font-style: italic; font-size: 1rem; line-height: 1.8; margin-bottom: 30px;">"{{ $review->comment }}"</p>
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <div style="width: 50px; height: 50px; background: var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 1.2rem;">
+                    <div style="width: 50px; height: 50px; background: var(--brand-maroon); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 1.2rem;">
                         {{ substr($review->name, 0, 1) }}
                     </div>
                     <div>
-                        <h4 style="color: #fff; margin: 0;">{{ $review->name }}</h4>
+                        <h4 style="color: var(--text-main); margin: 0;">{{ $review->name }}</h4>
                         <small style="color: #666;">{{ $review->created_at->diffForHumans() }}</small>
                     </div>
                 </div>

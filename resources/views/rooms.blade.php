@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="section" style="padding-top: 150px; background: #ffffff;">
+<section class="section mobile-pt-40" style="padding-top: 150px; background: #ffffff;">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
+        <div style="text-align: center; margin-bottom: 70px;" class="mobile-mt-30">
             <h1 style="font-size: 3rem; margin-bottom: 15px; color: var(--brand-maroon); font-weight: 600;">Exquisite Suites</h1>
             <div style="width: 80px; height: 3px; background: var(--brand-maroon); margin: 0 auto;"></div>
             <p style="color: var(--text-main); margin-top: 20px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Elegantly appointed rooms designed for maximum comfort and relaxation during your stay at Ranjan Residency.</p>

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="section" style="padding-top: 150px; background: #ffffff;">
+<section class="section mobile-pt-40" style="padding-top: 150px; background: #ffffff;">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
+        <div style="text-align: center; margin-bottom: 70px;" class="mobile-mt-30">
             <h1 style="font-size: 3rem; margin-bottom: 15px; color: var(--brand-maroon); font-weight: 600;">Exquisite Services</h1>
             <div style="width: 80px; height: 3px; background: var(--brand-maroon); margin: 0 auto;"></div>
             <p style="color: var(--text-main); margin-top: 20px; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Providing world-class facilities and seamless services to ensure your experience at Ranjan Residency is nothing short of extraordinary.</p>
@@ -23,11 +23,11 @@
 
         <!-- Convention Hall Detail -->
         <div class="mobile-column" style="margin-top: 100px; background: #ffffff; overflow: hidden; display: flex; flex-wrap: wrap; border: 1px solid #eeeeee; box-shadow: 0 40px 100px rgba(0,0,0,0.05);">
-            <div style="flex: 1; min-width: 320px; height: 450px;">
-                <img src="{{ asset('images/site/20260207071033_IMG_4981.JPG') }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Grand Convention Hall">
+            <div style="flex: 1; min-width: 320px; height: 450px;" class="mobile-h-auto">
+                <img src="{{ asset('images/site/20260207071033_IMG_4981.JPG') }}" style="width: 100%; height: 100%; object-fit: cover; min-height: 250px;" alt="Grand Convention Hall">
             </div>
-            <div style="flex: 1; min-width: 300px; padding: 60px; display: flex; flex-direction: column; justify-content: center;">
-                <h2 style="margin-bottom: 25px; font-size: 2.5rem; color: var(--text-main); font-weight: 600;">Grand <span style="color: var(--brand-maroon);">A/C Hall</span></h2>
+            <div style="flex: 1; min-width: 300px; padding: 60px; display: flex; flex-direction: column; justify-content: center;" class="mobile-px-20 mobile-pt-40">
+                <h2 style="margin-bottom: 25px; font-size: 2.5rem; color: var(--text-main); font-weight: 600;" class="mobile-text-center">Grand <span style="color: var(--brand-maroon);">A/C Hall</span></h2>
                 <p style="color: var(--text-main); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.8;">
                     Our state-of-the-art air-conditioned hall is the crown jewel of Poigai. Perfect for weddings, corporate gala dinners, and international conferences. 
                 </p>
