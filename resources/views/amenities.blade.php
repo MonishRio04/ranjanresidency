@@ -9,7 +9,7 @@
             <p style="color: var(--text-main); margin-top: 20px; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Providing world-class facilities and seamless services to ensure your experience at Ranjan Residency is nothing short of extraordinary.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
             @foreach($amenities as $amenity)
             <div class="amenity-card">
                 <div class="icon-box">

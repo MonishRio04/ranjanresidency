@@ -138,7 +138,7 @@
         .navbar {
             background-color: #fff;
             padding: 15px 0;
-            position: fixed;
+            position: sticky;
             width: 100%;
             top: 0;
             z-index: 1000;
@@ -154,11 +154,12 @@
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--brand-maroon);
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -181,6 +182,10 @@
 
         .nav-link:hover {
             color: var(--brand-maroon);
+        }
+
+        @media (max-width: 1050px) {
+            /* This is now handled by the mobile menu at 1150px */
         }
 
         /* Footer */
@@ -220,7 +225,15 @@
             cursor: pointer;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1150px) {
+            .section {
+                padding: 50px 0;
+            }
+
+            h1 { font-size: 2.2rem !important; }
+            h2 { font-size: 1.8rem !important; }
+            h3 { font-size: 1.4rem !important; }
+            
             .nav-links {
                 display: none;
                 position: absolute;
@@ -229,12 +242,18 @@
                 width: 100%;
                 background: #ffffff;
                 flex-direction: column;
-                padding: 40px 20px;
+                padding: 30px 20px;
                 text-align: center;
                 border-bottom: 2px solid var(--brand-maroon);
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             }
             
+            .nav-links .nav-link {
+                width: 100%;
+                padding: 15px;
+                border-bottom: 1px solid #f5f5f5;
+            }
+
             .nav-links.active {
                 display: flex;
             }
@@ -243,16 +262,24 @@
                 display: block;
             }
 
-            .hero-title {
-                font-size: 2.5rem !important;
+            .md-hidden-header {
+                display: inline-block !important; /* Show in mobile menu */
+                margin: 20px 0 0 0;
+                width: 200px;
             }
 
-            .section {
-                padding: 60px 0;
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero-title {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
             }
 
             .mobile-column {
                 flex-direction: column !important;
+                gap: 30px !important;
             }
 
             .mobile-p-0 {
@@ -265,6 +292,22 @@
 
             .md-hidden-header {
                 display: none !important;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem !important; }
+            h2 { font-size: 1.8rem !important; }
+            .hero-title { font-size: 1.8rem !important; }
+            .btn-maroon { 
+                padding: 12px 25px; 
+                font-size: 0.75rem; 
+                width: 100%;
+                text-align: center;
             }
         }
 

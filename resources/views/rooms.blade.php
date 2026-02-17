@@ -9,7 +9,7 @@
             <p style="color: var(--text-main); margin-top: 20px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Elegantly appointed rooms designed for maximum comfort and relaxation during your stay at Ranjan Residency.</p>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px;">
             @foreach($rooms as $room)
             <div class="luxury-room-card" style="border-radius: 25px; overflow: hidden; border: 1px solid #eeeeee;">
                 <div class="image-wrapper" style="height: 350px;">

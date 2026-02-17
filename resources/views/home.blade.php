@@ -3,8 +3,8 @@
 @section('content')
 
 <!-- Hero Section -->
-<section id="home" style="
-    height: 100vh; 
+<section id="home" class="hero-section" style="
+    min-height: 100vh; 
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ asset('images/site/hero.jpg') }}'); 
     background-size: cover; 
     background-position: center;
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 60px;
+    padding: 100px 0;
 ">
     <div class="container" style="animation: fadeIn 1.2s ease-out;">
         <h2 style="font-size: 1.1rem; letter-spacing: 5px; color: #fff; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Discover Luxury At</h2>
@@ -115,7 +115,7 @@
 </section>
 
 <!-- Special Showcase -->
-<section style="height: 600px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/uploaded_media_0_1770826520282.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; align-items: center; justify-content: center;">
+<section style="min-height: 400px; padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/uploaded_media_0_1770826520282.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; align-items: center; justify-content: center;">
     <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 50px; border-radius: 20px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 20px;">
         <h2 style="color: #fff; font-size: 3rem; margin-bottom: 20px;">Art & Tradition</h2>
         <p style="color: #fff; font-size: 1.2rem; font-family: 'Lato'; letter-spacing: 3px; text-transform: uppercase;">Preserving our rich cultural heritage</p>
@@ -131,10 +131,10 @@
             <p style="color: var(--text-main); font-size: 1.1rem;">Elegance in every detail</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px;">
             @foreach($rooms as $room)
             <div style="background: #ffffff; border-radius: 25px; overflow: hidden; transition: all 0.4s; border: 1px solid #eeeeee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
-                <div style="height: 300px; overflow: hidden; position: relative;">
+                <div style="height: 250px; overflow: hidden; position: relative;">
                     <!-- Swiper for Rooms -->
                     <div class="swiper room-swiper-{{ $room['id'] }}" style="height: 100%;">
                         <div class="swiper-wrapper">
@@ -198,8 +198,8 @@
                 <div style="border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
                     <div class="swiper banquet-swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207062753_IMG_4894.JPG') }}" style="width:100%; height:450px; object-fit:cover;" alt="Banquet Hall"></div>
-                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:450px; object-fit:cover;" alt="Hall View"></div>
+                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207062753_IMG_4894.JPG') }}" style="width:100%; height:300px; md-height:450px; object-fit:cover;" class="banquet-img" alt="Banquet Hall"></div>
+                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:300px; md-height:450px; object-fit:cover;" class="banquet-img" alt="Hall View"></div>
                         </div>
                         <div class="swiper-button-next" style="color: #fff;"></div>
                         <div class="swiper-button-prev" style="color: #fff;"></div>
@@ -307,7 +307,7 @@
             <p style="color: var(--text-main);">Glimpses of our curated boutique premises</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px;">
             @forelse($uploadedMedia as $media)
             <div class="luxury-card" style="padding: 0; overflow: hidden; position: relative; height: 350px;">
                 @if($media->type === 'video')
@@ -358,7 +358,7 @@
             <p style="color: var(--text-main); font-size: 1.1rem;">Warm words from our cherished visitors</p>
         </div>
 
-        <div style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); display: grid; gap: 40px;">
+        <div style="grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); display: grid; gap: 30px;">
             @foreach($reviews as $review)
             <div class="luxury-card" style="padding: 50px 40px; border-left: 5px solid var(--brand-maroon);">
                 <i class="fas fa-quote-left" style="font-size: 2rem; color: #f0f0f0; margin-bottom: 20px; display: block;"></i>
@@ -383,7 +383,7 @@
         
         </div>
         
-        <div style="margin-top: 80px; background: #ffffff; padding: 60px; border: 1px solid #eeeeee; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div style="margin-top: 80px; background: #ffffff; padding: 40px 20px; border: 1px solid #eeeeee; max-width: 1000px; margin-left: auto; margin-right: auto;">
             <div style="text-align: center; margin-bottom: 50px;">
                 <h3 style="font-size: 2.5rem; color: var(--brand-maroon); margin-bottom: 15px; font-weight: 600;">Share Your Experience</h3>
                 <p style="color: var(--text-main); font-size: 1.1rem;">Your feedback helps us provide even better hospitality</p>

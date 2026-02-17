@@ -49,7 +49,7 @@
         </div>
 
         <!-- List View (Mobile & Backup) -->
-        <div style="margin-top: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+        <div style="margin-top: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px;">
             @foreach($nearbyPlaces as $category)
             <div class="category-card" style="background: #ffffff; padding: 40px; border: 1px solid #eee; transition: all 0.3s;">
                 <h3 style="color: var(--brand-maroon); margin-bottom: 30px; font-size: 1.6rem; display: flex; align-items: center; gap: 15px;">
