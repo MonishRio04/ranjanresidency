@@ -11,19 +11,28 @@
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
             @foreach($rooms as $room)
-            <div class="luxury-room-card">
-                <div class="image-wrapper">
-                    <img src="{{ $room['image'] }}" alt="{{ $room['title'] }}">
-                    <div style="position: absolute; top: 20px; left: 20px; z-index: 5;">
-                        <span style="background: var(--brand-maroon); color: #fff; padding: 6px 15px; font-weight: bold; font-size: 0.75rem; text-transform: uppercase;">
-                            <i class="fas fa-certificate"></i> Free Non-Veg Breakfast
-                        </span>
+            <div class="luxury-room-card" style="border-radius: 25px; overflow: hidden; border: 1px solid #eeeeee;">
+                <div class="image-wrapper" style="height: 350px;">
+                    <!-- Swiper for Rooms -->
+                    <div class="swiper room-swiper-{{ $room['id'] }}" style="height: 100%;">
+                        <div class="swiper-wrapper">
+                            @foreach($room['images'] as $img)
+                            <div class="swiper-slide">
+                                <a href="{{ $img }}" class="glightbox">
+                                    <img src="{{ $img }}" style="width: 100%; height: 100%; object-fit: cover;" alt="{{ $room['title'] }}">
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-button-next" style="color: #fff; transform: scale(0.7);"></div>
+                        <div class="swiper-button-prev" style="color: #fff; transform: scale(0.7);"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <div class="content-wrapper">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
                         <h3 style="font-size: 1.8rem; color: var(--text-main); font-weight: 600;">{{ $room['title'] }}</h3>
-                        <div style="color: var(--brand-maroon); font-weight: 700; font-size: 1.2rem;">{{ $room['price'] }}</div>
+                        <!-- <div style="color: var(--brand-maroon); font-weight: 700; font-size: 1.2rem;">{{ $room['price'] }}</div> -->
                     </div>
                     <p style="color: var(--text-muted); margin-bottom: 25px; line-height: 1.7;">{{ $room['description'] }}</p>
                     
@@ -36,6 +45,19 @@
                     <a href="tel:+919786590145" class="btn-maroon" style="width: 100%; text-align: center; border-radius: 0;">RESERVE THIS SUITE</a>
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    new Swiper('.room-swiper-{{ $room['id'] }}', {
+                        loop: true,
+                        autoplay: {
+                            delay: {{ 3500 + ($loop->index * 500) }},
+                            disableOnInteraction: false,
+                        },
+                        pagination: { el: '.swiper-pagination', clickable: true },
+                        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                    });
+                });
+            </script>
             @endforeach
         </div>
     </div>

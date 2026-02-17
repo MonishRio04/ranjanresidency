@@ -6,7 +6,7 @@
         <div style="text-align: center; margin-bottom: 70px;">
             <h1 style="font-size: 3rem; margin-bottom: 15px; color: var(--brand-maroon); font-weight: 600;">Prestige Gallery</h1>
             <div style="width: 80px; height: 3px; background: var(--brand-maroon); margin: 0 auto;"></div>
-            <p style="color: var(--text-main); margin-top: 20px;">Capturing the essence of luxury and celebration at Ranjan Mahal</p>
+            <p style="color: var(--text-main); margin-top: 20px;">Capturing the essence of luxury and celebration at Ranjan Residency</p>
         </div>
         
         <div style="columns: 3 300px; column-gap: 20px; overflow: hidden;">
@@ -30,11 +30,13 @@
             @endphp
 
             @foreach($galleryItems as $image)
-            <div style="margin-bottom: 20px; position: relative; overflow: hidden; break-inside: avoid; border: 1px solid #eeeeee;">
-                <img src="{{ $image }}" style="width: 100%; display: block; transition: all 0.5s ease;" class="gallery-img">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" style="font-size: 2rem; color: var(--brand-maroon);"></i>
-                </div>
+            <div style="margin-bottom: 20px; position: relative; overflow: hidden; break-inside: avoid; border: 1px solid #eeeeee;" class="gallery-item-wrapper">
+                <a href="{{ $image }}" class="glightbox">
+                    <img src="{{ $image }}" style="width: 100%; display: block; transition: all 0.5s ease;" class="gallery-img">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus" style="font-size: 2rem; color: var(--brand-maroon);"></i>
+                    </div>
+                </a>
             </div>
             @endforeach
         </div>

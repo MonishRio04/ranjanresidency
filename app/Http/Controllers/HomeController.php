@@ -32,6 +32,12 @@ class HomeController extends Controller
         return view('rooms', compact('rooms'));
     }
 
+    public function velloreSites()
+    {
+        $nearbyPlaces = $this->getNearbyPlacesData();
+        return view('vellore-sites', compact('nearbyPlaces'));
+    }
+
     public function amenities()
     {
         $amenities = $this->getAmenitiesData();
@@ -58,6 +64,11 @@ class HomeController extends Controller
                 'price' => '₹4,500 / Day',
                 'description' => 'Experience luxury with our premium Golden Suite, featuring a king-size bed, city view, and exclusive amenities.',
                 'image' => asset('images/site/Room1.JPG'),
+                'images' => [
+                    asset('images/site/Room1.JPG'),
+                    asset('images/site/20260207061731_IMG_4872.JPG'),
+                    asset('images/site/20260207061750_IMG_4873.JPG')
+                ],
                 'features' => ['King Bed', 'City View', 'Free Wi-Fi', 'Free Non-Veg Breakfast']
             ],
             [
@@ -66,6 +77,11 @@ class HomeController extends Controller
                 'price' => '₹2,500 / Day',
                 'description' => 'Perfect for business travelers, our Deluxe Room offers comfort and convenience with a modern workspace.',
                 'image' => asset('images/site/Room2.JPG'),
+                'images' => [
+                    asset('images/site/Room2.JPG'),
+                    asset('images/site/20260207062202_IMG_4882.JPG'),
+                    asset('images/site/20260207062246_IMG_4884.JPG')
+                ],
                 'features' => ['Queen Bed', 'Work Desk', 'Wi-Fi', 'Free Non-Veg Breakfast']
             ],
             [
@@ -74,6 +90,11 @@ class HomeController extends Controller
                 'price' => '₹5,500 / Day',
                 'description' => 'Spacious accommodation for the whole family, with two bedrooms and a living area.',
                 'image' => asset('images/site/Room3.JPG'),
+                'images' => [
+                    asset('images/site/Room3.JPG'),
+                    asset('images/site/20260207061806_IMG_4874.JPG'),
+                    asset('images/site/20260207061851_IMG_4875.JPG')
+                ],
                 'features' => ['2 Bedrooms', 'Living Area', 'Kitchenette', 'Free Non-Veg Breakfast']
             ],
         ];
