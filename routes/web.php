@@ -13,6 +13,7 @@ Route::delete('/media/{id}', [MediaController::class, 'destroy'])->name('media.d
 Route::post('/reviews', [\App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
 
 Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/vellore-sites', [HomeController::class, 'velloreSites'])->name('vellore-sites');
 Route::get('/rooms', [HomeController::class, 'rooms'])->name('rooms');
 Route::get('/amenities', [HomeController::class, 'amenities'])->name('amenities');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');

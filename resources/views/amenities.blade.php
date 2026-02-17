@@ -6,7 +6,7 @@
         <div style="text-align: center; margin-bottom: 70px;">
             <h1 style="font-size: 3rem; margin-bottom: 15px; color: var(--brand-maroon); font-weight: 600;">Exquisite Services</h1>
             <div style="width: 80px; height: 3px; background: var(--brand-maroon); margin: 0 auto;"></div>
-            <p style="color: var(--text-main); margin-top: 20px; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Providing world-class facilities and seamless services to ensure your experience at Ranjan Mahal is nothing short of extraordinary.</p>
+            <p style="color: var(--text-main); margin-top: 20px; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Providing world-class facilities and seamless services to ensure your experience at Ranjan Residency is nothing short of extraordinary.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">

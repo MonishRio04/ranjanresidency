@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranjan Residency & Mahal - Luxury & Comfort</title>
+    <title>Ranjan Residency - Luxury & Comfort</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     
     <style>
         :root {
@@ -160,7 +163,7 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 15px;
             align-items: center;
         }
 
@@ -168,12 +171,12 @@
             color: var(--text-main);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
             transition: all 0.3s;
             position: relative;
             font-weight: 700;
-            padding: 10px 15px;
+            padding: 10px 10px;
         }
 
         .nav-link:hover {
@@ -285,6 +288,7 @@
                 <a href="{{ route('home') }}" class="nav-link">Home</a>
                 <a href="{{ route('about') }}" class="nav-link">About</a>
                 <a href="{{ route('rooms') }}" class="nav-link">Rooms</a>
+                <a href="{{ route('vellore-sites') }}" class="nav-link">Vellore Sites</a>
                 <a href="{{ route('amenities') }}" class="nav-link">Amenities</a>
                 <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
                 <a href="{{ route('contact') }}" class="nav-link">Contact</a>
@@ -297,6 +301,15 @@
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
         }
+
+        // Initialize GLightbox
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightbox = GLightbox({
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true
+            });
+        });
     </script>
 
     @yield('content')
@@ -307,7 +320,7 @@
             <div class="footer-content">
                 <div>
                     <h3 class="footer-title">Ranjan Residency</h3>
-                    <p style="color: #aaa; margin-bottom: 15px;">Experience the perfect blend of luxury and comfort. Our residency offers well-appointed rooms and top-tier hospitality in the heart of Vellore.</p>
+                    <p style="color: #fff; margin-bottom: 15px;">Experience the perfect blend of luxury and comfort. Our residency offers well-appointed rooms and top-tier hospitality in the heart of Vellore.</p>
                 </div>
                 <div>
                     <h3 class="footer-title">Contact Us</h3>
@@ -319,15 +332,15 @@
                 <div>
                     <h3 class="footer-title">Quick Links</h3>
                     <ul style="list-style: none;">
-                        <li><a href="/rooms" style="color: #aaa; text-decoration: none;">Luxury Rooms</a></li>
-                        <li><a href="/amenities" style="color: #aaa; text-decoration: none;">Amenities</a></li>
-                        <li><a href="/gallery" style="color: #aaa; text-decoration: none;">Photo Gallery</a></li>
-                        <li><a href="/contact" style="color: #aaa; text-decoration: none;">Contact Us</a></li>
+                        <li><a href="/rooms"  style="color: #fff; text-decoration: none;">Luxury Rooms</a></li>
+                        <li><a href="/amenities" style="color: #fff; text-decoration: none;">Amenities</a></li>
+                        <li><a href="/gallery" style="color: #fff; text-decoration: none;">Photo Gallery</a></li>
+                        <li><a href="/contact" style="color: #fff; text-decoration: none;">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; {{ date('Y') }} Ranjan Residency & Mahal. All Rights Reserved.
+                &copy; {{ date('Y') }} Ranjan Residency. All Rights Reserved.
             </div>
         </div>
     </footer>

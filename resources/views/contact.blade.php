@@ -41,7 +41,7 @@
                         </div>
                         <div>
                             <h4 style="margin-bottom: 10px; color: var(--brand-maroon); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Email Inquiry</h4>
-                            <p style="color: var(--text-main);">info@ranjanmahal.com</p>
+                            <p style="color: var(--text-main);">info@ranjanresidency.com</p>
                         </div>
                     </div>
                     

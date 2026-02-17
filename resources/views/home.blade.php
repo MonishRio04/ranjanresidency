@@ -61,7 +61,7 @@
                 <h2 style="font-size: 2.8rem; margin-bottom: 25px; line-height: 1.2; font-weight: 600; color: var(--brand-maroon);">Heritage & <br>Hospitality</h2>
                 <div style="width: 60px; height: 3px; background: var(--brand-maroon); margin-bottom: 30px;"></div>
                 <p style="margin-bottom: 35px; color: var(--text-main); font-size: 1.1rem; line-height: 1.8;">
-                    Located conveniently on M.C. Road, Ranjan Mahal & Residency is a landmark of luxury in Vellore. We provide an exquisite environment for weddings, corporate events, and premium stays.
+                    Located conveniently on M.C. Road, Ranjan Residency is a landmark of luxury in Vellore. We provide an exquisite environment for weddings, corporate events, and premium stays.
                 </p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
                     <div style="border-left: 3px solid var(--brand-maroon); padding-left: 20px;">
@@ -78,55 +78,9 @@
             </div>
             <div style="flex: 1; min-width: 320px; position: relative;">
                 <div style="position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid var(--brand-maroon); z-index: 1;"></div>
-                <img src="{{ asset('images/site/20260207060025_IMG_4849.JPG') }}" style="width: 100%; position: relative; z-index: 2; box-shadow: 20px 20px 60px rgba(0,0,0,0.1);" alt="Ranjan Mahal Interior">
+                <img src="{{ asset('images/site/20260207060025_IMG_4849.JPG') }}" style="width: 100%; position: relative; z-index: 2; box-shadow: 20px 20px 60px rgba(0,0,0,0.1);" alt="Ranjan Residency Interior">
             </div>
         </div>
-    </div>
-</section>
-<!-- Nearby Attractions Carousels -->
-<section id="nearby" class="section bg-secondary" style="overflow: hidden;">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-size: 2.8rem; margin-bottom: 15px; font-weight: 600; color: var(--brand-maroon);">Nearby Exploration</h2>
-            <div style="width: 80px; height: 3px; background: var(--brand-maroon); margin: 0 auto 20px;"></div>
-            <p style="color: var(--text-main); font-size: 1.1rem;">Ideally located for the modern traveler</p>
-        </div>
-
-        @foreach($nearbyPlaces as $category)
-        <div style="margin-bottom: 80px;">
-            <div style="margin-bottom: 35px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <h3 style="color: var(--brand-maroon); font-size: 1.8rem; margin: 0; font-family: 'Cinzel', serif;">{{ $category['title'] }}</h3>
-                <div style="height: 1px; flex: 1; background: #eee; min-width: 50px;"></div>
-                <p style="color: var(--text-muted); margin: 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">{{ $category['subtitle'] }}</p>
-            </div>
-
-            <!-- Swiper Carousel -->
-            <div class="swiper {{ $category['slug'] }}-swiper" style="padding-bottom: 50px;">
-                <div class="swiper-wrapper">
-                    @foreach($category['items'] as $place)
-                    <div class="swiper-slide">
-                        <div class="luxury-card" style="padding: 0; overflow: hidden; position: relative; height: 100%; border-radius: 20px; height: 450px;">
-                            <div style="height: 240px; overflow: hidden;">
-                                <img src="{{ $place['image'] }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="{{ $place['name'] }}">
-                            </div>
-                            <div style="position: absolute; top: 20px; right: 20px; background: var(--bg-obsidian); color: #fff; padding: 7px 20px; border-radius: 12px; font-weight: 700; font-size: 0.8rem; border: 1px solid var(--border-glow); box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); z-index: 5;">
-                                {{ $place['distance'] }}
-                            </div>
-                            <div style="padding: 30px; background: #ffffff; height: calc(100% - 240px); border-bottom: 3px solid var(--brand-maroon);">
-                                <h3 style="margin-bottom: 12px; color: var(--text-main); font-size: 1.3rem; font-weight: 600;">{{ $place['name'] }}</h3>
-                                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">{{ $place['description'] }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <!-- Add Pagination/Navigation -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next" style="color: var(--primary-gold); transform: scale(0.7);"></div>
-                <div class="swiper-button-prev" style="color: var(--primary-gold); transform: scale(0.7);"></div>
-            </div>
-        </div>
-        @endforeach
     </div>
 </section>
 
@@ -144,15 +98,15 @@
                 <p style="color: var(--text-muted); line-height: 1.7;">A magnificent space for your most treasured celebrations and corporate functions.</p>
             </div>
             <div class="luxury-card">
-                <i class="fas fa-bed" style="font-size: 2.8rem; color: var(--primary-indigo); margin-bottom: 30px; display: block;"></i>
+                <i class="fas fa-bed" style="font-size: 2.8rem; color: var(--brand-maroon); margin-bottom: 30px; display: block;"></i>
                 <h3 style="font-weight: 700; font-size: 1.6rem; margin-bottom: 20px;">Elite Suites</h3>
                 <p style="color: var(--text-muted); line-height: 1.8; opacity: 0.8;">Experience the finest in-room technology and comfort with our premium curated suites.</p>
             </div>
-            <div class="luxury-card">
-                <i class="fas fa-shopping-bag" style="font-size: 2.8rem; color: var(--primary-indigo); margin-bottom: 30px; display: block;"></i>
+            <!-- <div class="luxury-card">
+                <i class="fas fa-shopping-bag" style="font-size: 2.8rem; color: var(--brand-maroon); margin-bottom: 30px; display: block;"></i>
                 <h3 style="font-weight: 700; font-size: 1.6rem; margin-bottom: 20px;">Shopping Mall</h3>
                 <p style="color: var(--text-muted); line-height: 1.8; opacity: 0.8;">Integrated shopping experience right at your doorstep, featuring top brands and convenience.</p>
-            </div>
+            </div> -->
         </div>
         <div style="text-align: center; margin-top: 60px;">
             <a href="{{ route('amenities') }}" style="color: var(--primary-indigo); text-decoration: none; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; border-bottom: 2px solid var(--primary-indigo); padding-bottom: 5px; transition: all 0.3s;">Explore All Amenities</a>
@@ -164,7 +118,7 @@
 <section style="height: 600px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/uploaded_media_0_1770826520282.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed; display: flex; align-items: center; justify-content: center;">
     <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 50px; border-radius: 20px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 20px;">
         <h2 style="color: #fff; font-size: 3rem; margin-bottom: 20px;">Art & Tradition</h2>
-        <p style="color: var(--primary-gold); font-size: 1.2rem; font-family: 'Lato'; letter-spacing: 3px; text-transform: uppercase;">Preserving our rich cultural heritage</p>
+        <p style="color: #fff; font-size: 1.2rem; font-family: 'Lato'; letter-spacing: 3px; text-transform: uppercase;">Preserving our rich cultural heritage</p>
     </div>
 </section>
 
@@ -178,17 +132,23 @@
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
-            @foreach(array_slice($rooms, 0, 3) as $room)
-            <div style="background: #ffffff; border-radius: 0; overflow: hidden; transition: all 0.4s; border: 1px solid #eeeeee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
-                <div style="height: 280px; overflow: hidden; position: relative;">
-                    <img src="{{ $room['image'] }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="{{ $room['title'] }}">
-                    <div style="position: absolute; top: 15px; left: 15px; z-index: 5;">
-                        <span style="background: #e74c3c; color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: inline-flex; align-items: center; gap: 5px;">
-                            <i class="fas fa-certificate"></i> Free Non-Veg Breakfast
-                        </span>
-                    </div>
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 20px;">
-                        <span style="background: var(--brand-maroon); color: #fff; padding: 7px 20px; font-weight: 700; font-size: 0.8rem;">{{ $room['price'] }}</span>
+            @foreach($rooms as $room)
+            <div style="background: #ffffff; border-radius: 25px; overflow: hidden; transition: all 0.4s; border: 1px solid #eeeeee; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <div style="height: 300px; overflow: hidden; position: relative;">
+                    <!-- Swiper for Rooms -->
+                    <div class="swiper room-swiper-{{ $room['id'] }}" style="height: 100%;">
+                        <div class="swiper-wrapper">
+                            @foreach($room['images'] as $img)
+                            <div class="swiper-slide">
+                                <a href="{{ $img }}" class="glightbox">
+                                    <img src="{{ $img }}" style="width: 100%; height: 100%; object-fit: cover;" alt="{{ $room['title'] }}">
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-button-next" style="color: #fff; transform: scale(0.6);"></div>
+                        <div class="swiper-button-prev" style="color: #fff; transform: scale(0.6);"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <div style="padding: 30px;">
@@ -202,13 +162,92 @@
                     <a href="{{ route('rooms') }}" style="display: inline-block; margin-top: 10px; color: var(--primary-indigo); text-decoration: none; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; border-bottom: 2px solid var(--primary-indigo); padding-bottom: 5px; transition: all 0.3s;">Discover Suite &rarr;</a>
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    new Swiper('.room-swiper-{{ $room['id'] }}', {
+                        loop: true,
+                        autoplay: {
+                            delay: {{ 3000 + ($loop->index * 1000) }},
+                            disableOnInteraction: false,
+                        },
+                        pagination: { el: '.swiper-pagination', clickable: true },
+                        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                    });
+                });
+            </script>
             @endforeach
         </div>
+
         <div style="text-align: center; margin-top: 60px;">
             <a href="{{ route('rooms') }}" class="btn-indigo">All Accommodations</a>
         </div>
     </div>
 </section>
+
+<!-- Banquet Hall / Mini Hall Section -->
+<section id="banquet" class="section" style="background: #fdfdfd; border-top: 1px solid #eee;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.8rem; margin-bottom: 15px; font-weight: 600; color: var(--brand-maroon);">Exclusive Banquet Hall</h2>
+            <div style="width: 80px; height: 3px; background: var(--brand-maroon); margin: 0 auto 20px;"></div>
+            <p style="color: var(--text-main); font-size: 1.1rem;">Perfect venue for Mini Events & Celebrations</p>
+        </div>
+
+        <div class="mobile-column" style="display: flex; gap: 50px; align-items: center;">
+            <div style="flex: 1; min-width: 320px;">
+                <div style="border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
+                    <div class="swiper banquet-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207062753_IMG_4894.JPG') }}" style="width:100%; height:450px; object-fit:cover;" alt="Banquet Hall"></div>
+                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:450px; object-fit:cover;" alt="Hall View"></div>
+                        </div>
+                        <div class="swiper-button-next" style="color: #fff;"></div>
+                        <div class="swiper-button-prev" style="color: #fff;"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <h3 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--text-main);">Grand Celebrations, <br>Mini Hall Convenience</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 30px;">
+                    Our fully air-conditioned Mini Hall is designed for intimate gatherings, birthday parties, and corporate meetings. Experience premium hospitality in a cozy yet grand setting.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 35px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-users" style="color: var(--brand-maroon);"></i>
+                        <span style="font-weight: 600;">100+ Capacity</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-snowflake" style="color: var(--brand-maroon);"></i>
+                        <span style="font-weight: 600;">Central A/C</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-utensils" style="color: var(--brand-maroon);"></i>
+                        <span style="font-weight: 600;">Catering Support</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-parking" style="color: var(--brand-maroon);"></i>
+                        <span style="font-weight: 600;">Ample Parking</span>
+                    </div>
+                </div>
+                <a href="{{ route('contact') }}" class="btn-maroon" style="padding: 15px 45px; border-radius: 0;">ENQUIRE NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.banquet-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+    });
+</script>
 
 <!-- Ganesha Section -->
 <section id="ganesha" class="section" style="background: rgba(15, 23, 42, 0.2); border-bottom: 1px solid rgba(255,255,255,0.05);">
@@ -231,18 +270,18 @@
 <section id="map" class="section bg-secondary">
     <div class="container">
         <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Visit <span style="color: #fff;">Us</span></h2>
-            <div style="width: 60px; height: 3px; background: var(--primary-gold); margin: 0 auto;"></div>
-            <p style="color: #999; margin-top: 20px;">Prime location on M.C. Road, Poigai, Vellore</p>
+            <h2 style="font-size: 2.5rem; margin-bottom: 15px; color: var(--brand-maroon);">Visit <span style="color: var(--text-main);">Us</span></h2>
+            <div style="width: 60px; height: 3px; background: var(--brand-maroon); margin: 0 auto;"></div>
+            <p style="color: var(--text-muted); margin-top: 20px;">Prime location on M.C. Road, Poigai, Vellore</p>
         </div>
         
-        <div class="mobile-column" style="display: flex; gap: 0; background: #1a1a1a; border-radius: 25px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 80px rgba(0,0,0,0.4);">
+        <div class="mobile-column" style="display: flex; gap: 0; background: #ffffff; border-radius: 25px; overflow: hidden; border: 1px solid #eeeeee; box-shadow: 0 40px 80px rgba(0,0,0,0.1);">
             <div style="flex: 2; height: 450px;">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.276495393043!2d79.0118!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3923fc7b4699%3A0xe9c394d2c8843940!2sPoigai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1625678901234!5m2!1sen!2sin" 
                     width="100%" 
                     height="100%" 
-                    style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" 
+                    style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy">
                 </iframe>
@@ -272,13 +311,24 @@
             @forelse($uploadedMedia as $media)
             <div class="luxury-card" style="padding: 0; overflow: hidden; position: relative; height: 350px;">
                 @if($media->type === 'video')
-                    <video style="width: 100%; height: 280px; object-fit: cover;" controls>
-                        <source src="{{ $media->url }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <div style="height: 280px; overflow: hidden; position: relative;">
+                        <a href="{{ $media->url }}" class="glightbox">
+                            <video style="width: 100%; height: 280px; object-fit: cover;">
+                                <source src="{{ $media->url }}" type="video/mp4">
+                            </video>
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2);">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: #fff; opacity: 0.9;"></i>
+                            </div>
+                        </a>
+                    </div>
                 @else
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="{{ $media->url }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="{{ $media->title }}">
+                    <div style="height: 280px; overflow: hidden; position: relative;">
+                        <a href="{{ $media->url }}" class="glightbox">
+                            <img src="{{ $media->url }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="{{ $media->title }}">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
+                                <i class="fas fa-search-plus" style="font-size: 2.5rem; color: #fff;"></i>
+                            </div>
+                        </a>
                     </div>
                 @endif
                 <div style="padding: 15px 20px;">
@@ -298,38 +348,6 @@
 
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        @foreach($nearbyPlaces as $category)
-        new Swiper('.{{ $category['slug'] }}-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: {{ 3000 + ($loop->index * 1000) }},
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        @endforeach
-    });
-</script>
-
-<style>
-.swiper-pagination-bullet { background: #555; }
-.swiper-pagination-bullet-active { background: var(--primary-gold) !important; }
-</style>
 
 <!-- Guest Reviews Section -->
 <section id="reviews" class="section" style="background: transparent;">
