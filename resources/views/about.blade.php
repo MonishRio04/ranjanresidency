@@ -10,7 +10,7 @@
         
         <div class="mobile-column" style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
             <div style="flex: 1; min-width: 320px; position: relative;">
-                <img src="{{ asset('images/site/20260207060025_IMG_4849.JPG') }}" style="width: 100%; border-radius: 0; box-shadow: 0 15px 40px rgba(0,0,0,0.1);" alt="Ranjan Residency Exterior">
+                <img src="{{ asset('images/site/krishna.png') }}" style="width: 100%; border-radius: 0; box-shadow: 0 15px 40px rgba(0,0,0,0.1);" alt="Ranjan Residency Exterior">
             </div>
             <div style="flex: 1.2; min-width: 280px;">
                 <h2 style="margin-bottom: 25px; font-size: 2.22rem; color: var(--text-main); font-weight: 600;">A Legacy of <span style="color: var(--brand-maroon);">Hospitality</span></h2>

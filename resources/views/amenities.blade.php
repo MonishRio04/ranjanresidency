@@ -23,13 +23,13 @@
 
         <!-- Convention Hall Detail -->
         <div class="mobile-column" style="margin-top: 100px; background: #ffffff; overflow: hidden; display: flex; flex-wrap: wrap; border: 1px solid #eeeeee; box-shadow: 0 40px 100px rgba(0,0,0,0.05);">
-            <div style="flex: 1; min-width: 320px; height: 450px;" class="mobile-h-auto">
-                <img src="{{ asset('images/site/20260207071033_IMG_4981.JPG') }}" style="width: 100%; height: 100%; object-fit: cover; min-height: 250px;" alt="Grand Convention Hall">
+            <div style="border-radius: 10px; flex: 1; min-width: 320px; height: 450px;" class="mobile-h-auto">
+                <img style="border-radius: 10px;box-shadow: 0 15px 40px rgba(0,0,0,0.1);" class src="{{ asset('images/site/ban-hall1.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; min-height: 250px;" alt="Grand Convention Hall">
             </div>
             <div style="flex: 1; min-width: 300px; padding: 60px; display: flex; flex-direction: column; justify-content: center;" class="mobile-px-20 mobile-pt-40">
-                <h2 style="margin-bottom: 25px; font-size: 2.5rem; color: var(--text-main); font-weight: 600;" class="mobile-text-center">Grand <span style="color: var(--brand-maroon);">A/C Hall</span></h2>
+                <h2 style="margin-bottom: 25px; font-size: 2.5rem; color: var(--text-main); font-weight: 600;" class="mobile-text-center">Mini <span style="color: var(--brand-maroon);">A/C Hall</span></h2>
                 <p style="color: var(--text-main); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.8;">
-                    Our state-of-the-art air-conditioned hall is the crown jewel of Poigai. Perfect for weddings, corporate gala dinners, and international conferences. 
+                    Our state-of-the-art air-conditioned hall is the crown jewel of Poigai. Perfect for  corporate gala dinners, and international conferences. 
                 </p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div style="font-size: 1rem; color: var(--text-main); font-weight: 600;"><i class="fas fa-check-circle" style="color: var(--brand-maroon); margin-right: 10px;"></i> 300+ Seating</div>

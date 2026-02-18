@@ -105,7 +105,7 @@ class HomeController extends Controller
         return [
             ['icon' => 'fa-wifi', 'title' => 'High-Speed Wi-Fi', 'desc' => 'Connect seamlessly throughout the property.'],
             ['icon' => 'fa-parking', 'title' => 'Spacious Parking', 'desc' => 'Secure parking for over 200 vehicles.'],
-            ['icon' => 'fa-calendar-check', 'title' => 'Convention Hall', 'desc' => 'A/C Hall perfect for weddings and events.'],
+            ['icon' => 'fa-calendar-check', 'title' => 'Convention Hall', 'desc' => 'A/C Hall perfect for  events.'],
             ['icon' => 'fa-shopping-bag', 'title' => 'Shopping Access', 'desc' => 'Integrated shopping mall for your convenience.'],
             ['icon' => 'fa-utensils', 'title' => 'Free Non-Veg Breakfast', 'desc' => 'Complementary non-veg breakfast for all room guests.'],
             ['icon' => 'fa-video', 'title' => '24/7 Security', 'desc' => 'CCTV surveillance and round-the-clock security.'],
@@ -199,7 +199,7 @@ class HomeController extends Controller
             ],
             [
                 'name' => 'Vellore Airport (Nearest)',
-                'distance' => 'Approx 90 km',
+                'distance' => '4 km',
                 'image' => asset('images/site/airport.webp'),
                 'description' => 'Nearest airport providing domestic connectivity.'
             ],

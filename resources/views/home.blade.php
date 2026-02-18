@@ -5,7 +5,7 @@
 <!-- Hero Section -->
 <section id="home" class="hero-section mobile-min-h-0" style="
     min-height: 100vh; 
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ asset('images/site/hero.jpg') }}'); 
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ asset('images/site/home.jpeg') }}'); 
     background-size: cover; 
     background-position: center;
     background-attachment: fixed;
@@ -61,7 +61,7 @@
                 <h2 style="font-size: 2.8rem; margin-bottom: 25px; line-height: 1.2; font-weight: 600; color: var(--brand-maroon);">Heritage & <br>Hospitality</h2>
                 <div style="width: 60px; height: 3px; background: var(--brand-maroon); margin-bottom: 30px;"></div>
                 <p style="margin-bottom: 35px; color: var(--text-main); font-size: 1.1rem; line-height: 1.8;">
-                    Located conveniently on M.C. Road, Ranjan Residency is a landmark of luxury in Vellore. We provide an exquisite environment for weddings, corporate events, and premium stays.
+                    Located conveniently on M.C. Road, Ranjan Residency is a landmark of luxury in Vellore. We provide an exquisite environment for corporate events, and premium stays.
                 </p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
                     <div style="border-left: 3px solid var(--brand-maroon); padding-left: 20px;">
@@ -78,7 +78,7 @@
             </div>
             <div style="flex: 1; min-width: 0; width: 100%; position: relative;">
                 <div style="position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid var(--brand-maroon); z-index: 1;"></div>
-                <img src="{{ asset('images/site/20260207060025_IMG_4849.JPG') }}" style="width: 100%; position: relative; z-index: 2; box-shadow: 20px 20px 60px rgba(0,0,0,0.1); display: block;" alt="Ranjan Residency Interior">
+                <img src="{{ asset('images/site/krishna.png') }}" style="width: 100%; position: relative; z-index: 2; box-shadow: 20px 20px 60px rgba(0,0,0,0.1); display: block;" alt="Ranjan Residency Interior">
             </div>
         </div>
     </div>
@@ -115,7 +115,7 @@
 </section>
 
 <!-- Special Showcase -->
-<section class="special-showcase" style="min-height: 400px; padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/uploaded_media_0_1770826520282.jpg') }}'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<section class="special-showcase" style="min-height: 400px; padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('images/site/krishna.png') }}'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; overflow: hidden;">
     <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 50px; border-radius: 20px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 20px;">
         <h2 style="color: #fff; font-size: 3rem; margin-bottom: 20px;">Art & Tradition</h2>
         <p style="color: #fff; font-size: 1.2rem; font-family: 'Lato'; letter-spacing: 3px; text-transform: uppercase;">Preserving our rich cultural heritage</p>
@@ -201,8 +201,8 @@
                 <div style="border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
                     <div class="swiper banquet-swiper" style="height: auto; width: 100%; max-width: 100%; overflow: hidden;">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207062753_IMG_4894.JPG') }}" style="width:100%; height:300px; object-fit:cover; display: block;" class="banquet-img" alt="Banquet Hall"></div>
-                            <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:300px; object-fit:cover; display: block;" class="banquet-img" alt="Hall View"></div>
+                            <div class="swiper-slide"><img src="{{ asset('images/site/ban-hall1.jpg') }}" style="width:100%; height:300px; object-fit:cover; display: block;" class="banquet-img" alt="Banquet Hall"></div>
+                            <!-- <div class="swiper-slide"><img src="{{ asset('images/site/20260207063237_IMG_4904.JPG') }}" style="width:100%; height:300px; object-fit:cover; display: block;" class="banquet-img" alt="Hall View"></div> -->
                         </div>
                         <div class="swiper-button-next" style="color: #fff;"></div>
                         <div class="swiper-button-prev" style="color: #fff;"></div>
@@ -265,7 +265,7 @@
             </div>
             <div style="flex: 1; min-width: 0; width: 100%; position: relative;">
                 <div style="position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid var(--brand-maroon); z-index: 1;"></div>
-                <img src="{{ asset('images/site/uploaded_media_2_1770826520282.jpg') }}" style="width: 100%; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; z-index: 2; display: block;" alt="Ganesha Shrine">
+                <img src="{{ asset('images/site/ganasha.jpg') }}" style="width: 100%; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; z-index: 2; display: block;" alt="Ganesha Shrine">
             </div>
         </div>
     </div>
